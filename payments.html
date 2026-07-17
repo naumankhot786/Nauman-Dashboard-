@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Payments | Nauman Labs</title>
+
+<link rel="stylesheet" href="payments.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="topbar">
+
+<h1>Payments</h1>
+
+<button id="openPaymentForm">
+<i class="fa-solid fa-plus"></i>
+Add Payment
+</button>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchPayment"
+placeholder="Search Payment...">
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Invoice</th>
+<th>Client</th>
+<th>Amount</th>
+<th>Status</th>
+<th>Date</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="paymentTable">
+
+</tbody>
+
+</table>
+
+<div id="paymentPopup" class="popup">
+
+<div class="popup-content">
+
+<h2>Add Payment</h2>
+
+<input
+type="text"
+id="invoiceNo"
+placeholder="Invoice No">
+
+<input
+type="text"
+id="paymentClient"
+placeholder="Client Name">
+
+<input
+type="number"
+id="paymentAmount"
+placeholder="Amount">
+
+<select id="paymentStatus">
+
+<option>Pending</option>
+
+<option>Paid</option>
+
+</select>
+
+<input
+type="date"
+id="paymentDate">
+
+<div class="buttons">
+
+<button id="savePayment">
+
+Save
+
+</button>
+
+<button id="closePayment">
+
+Cancel
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module" src="payments.js"></script>
+
+</body>
+</html>

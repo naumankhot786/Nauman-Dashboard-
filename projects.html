@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Projects | Nauman Labs</title>
+
+<link rel="stylesheet" href="projects.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="topbar">
+
+<h1>Projects</h1>
+
+<button id="openProjectForm">
+<i class="fa-solid fa-plus"></i>
+Add Project
+</button>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchProject"
+placeholder="Search Project...">
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Project</th>
+<th>Client</th>
+<th>Status</th>
+<th>Deadline</th>
+<th>Progress</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="projectTable">
+
+</tbody>
+
+</table>
+
+<!-- Popup -->
+
+<div class="popup" id="projectPopup">
+
+<div class="popup-content">
+
+<h2>Add Project</h2>
+
+<input
+type="text"
+id="projectName"
+placeholder="Project Name">
+
+<input
+type="text"
+id="projectClient"
+placeholder="Client Name">
+
+<select id="projectStatus">
+
+<option>Pending</option>
+<option>In Progress</option>
+<option>Completed</option>
+
+</select>
+
+<input
+type="date"
+id="projectDeadline">
+
+<input
+type="number"
+id="projectProgress"
+placeholder="Progress (%)"
+min="0"
+max="100">
+
+<div class="buttons">
+
+<button id="saveProject">
+Save
+</button>
+
+<button id="closeProject">
+Cancel
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module" src="projects.js"></script>
+
+</body>
+</html>

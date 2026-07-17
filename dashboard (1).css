@@ -1,0 +1,271 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+display:flex;
+background:#0f172a;
+color:white;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:260px;
+height:100vh;
+background:#111827;
+padding:20px;
+position:fixed;
+left:0;
+top:0;
+}
+
+.logo{
+text-align:center;
+margin-bottom:30px;
+}
+
+.logo img{
+width:90px;
+height:90px;
+border-radius:50%;
+border:3px solid #3b82f6;
+object-fit:cover;
+}
+
+.logo h2{
+margin-top:10px;
+}
+
+.logo p{
+color:#94a3b8;
+}
+
+.sidebar ul{
+list-style:none;
+margin-top:30px;
+}
+
+.sidebar li{
+margin:10px 0;
+}
+
+.sidebar a{
+display:flex;
+align-items:center;
+gap:10px;
+padding:12px;
+text-decoration:none;
+color:white;
+border-radius:10px;
+transition:.3s;
+}
+
+.sidebar a:hover,
+.sidebar .active a{
+background:#2563eb;
+}
+
+/* Main */
+
+.main{
+margin-left:260px;
+width:100%;
+padding:30px;
+}
+
+/* Topbar */
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
+
+.admin{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.admin img{
+width:45px;
+height:45px;
+border-radius:50%;
+border:2px solid #3b82f6;
+}
+
+/* Cards */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 20px rgba(59,130,246,.5);
+}
+
+.card h3{
+color:#94a3b8;
+margin-bottom:10px;
+}
+
+.card h2{
+font-size:30px;
+color:#3b82f6;
+}
+
+/* Recent */
+
+.recent{
+margin-top:30px;
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+body{
+flex-direction:column;
+}
+
+.sidebar{
+position:relative;
+width:100%;
+height:auto;
+}
+
+.main{
+margin-left:0;
+padding:15px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.topbar{
+flex-direction:column;
+gap:15px;
+}
+
+}
+.quick-actions{
+margin-top:30px;
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+}
+
+.action-buttons{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+margin-top:15px;
+}
+
+.action-buttons a{
+text-decoration:none;
+background:#2563eb;
+color:#fff;
+padding:15px;
+border-radius:10px;
+text-align:center;
+transition:.3s;
+font-weight:bold;
+}
+
+.action-buttons a:hover{
+background:#1d4ed8;
+transform:translateY(-3px);
+}
+.chart-container{
+margin-top:30px;
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+}
+
+.chart-container canvas{
+width:100% !important;
+max-height:400px;
+}
+.recent p{
+color:#cbd5e1;
+margin-top:10px;
+}
+
+.chart-container h2{
+margin-bottom:15px;
+}
+
+@media(max-width:768px){
+
+.chart-container{
+overflow-x:auto;
+}
+
+.chart-container canvas{
+min-width:300px;
+}
+
+}
+const ctx = document.getElementById("dashboardChart");
+
+new Chart(ctx, {
+    type: "bar",
+    data: {
+        labels: [
+            "Clients",
+            "Projects",
+            "Messages",
+            "Completed"
+        ],
+        datasets: [{
+            label: "Nauman Labs",
+            data: [
+                clients.size,
+                projects.size,
+                messages.size,
+                completed
+            ],
+            backgroundColor: [
+                "#3b82f6",
+                "#22c55e",
+                "#f59e0b",
+                "#ef4444"
+            ],
+            borderRadius: 8
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});

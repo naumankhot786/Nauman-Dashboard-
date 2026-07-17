@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nauman Labs Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+    
+
+<div class="sidebar">
+
+<div class="logo">
+
+<img src="logo.png" alt="Logo">
+
+<h2>Nauman Labs</h2>
+
+<p>Admin Panel</p>
+
+</div>
+
+<ul>
+
+<li class="active">
+<a href="dashboard.html">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="clients.html">
+<i class="fa-solid fa-users"></i>
+Clients
+</a>
+</li>
+
+<li>
+<a href="projects.html">
+<i class="fa-solid fa-folder"></i>
+Projects
+</a>
+</li>
+
+<li>
+<a href="payments.html">
+<i class="fa-solid fa-wallet"></i>
+Payments
+</a>
+</li>
+
+<li>
+<a href="messages.html">
+<i class="fa-solid fa-envelope"></i>
+Messages
+</a>
+</li>
+
+<li>
+<a href="analytics.html">
+<i class="fa-solid fa-chart-line"></i>
+Analytics
+</a>
+</li>
+
+<li>
+<a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a>
+</li>
+
+<li>
+<a href="#" id="logout">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>Dashboard</h1>
+
+<div class="admin">
+
+<img src="logo.png" alt="Logo">
+
+<span>Welcome Admin</span>
+
+</div>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Clients</h3>
+<h2 id="clientsCount">0</h2>
+</div>
+
+<div class="card">
+<h3>Total Projects</h3>
+<h2 id="projectsCount">0</h2>
+</div>
+
+<div class="card">
+<h3>Total Revenue</h3>
+<h2 id="revenue">₹0</h2>
+</div>
+
+<div class="card">
+<h3>Total Messages</h3>
+<h2 id="messagesCount">0</h2>
+</div>
+
+<div class="card">
+    <h3>Completed Projects</h3>
+    <h2 id="completedProjects">0</h2>
+</div>
+
+</div>
+
+<div class="chart-container">
+
+    <h2>Business Analytics</h2>
+
+    <canvas id="dashboardChart"></canvas>
+
+</div>
+
+<div class="quick-actions">
+
+<h2>Quick Actions</h2>
+
+<div class="action-buttons">
+
+<a href="clients.html">👥 Manage Clients</a>
+
+<a href="projects.html">📂 Manage Projects</a>
+
+<a href="payments.html">💰 Payments</a>
+
+<a href="messages.html">📩 Messages</a>
+
+</div>
+
+</div>
+<div class="recent">
+
+<h2>Recent Activity</h2>
+
+<p>Welcome to Nauman Labs CRM 🚀</p>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="dashboard.js"></script>
+</body>
+</html>

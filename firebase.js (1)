@@ -1,0 +1,18 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBQmlUhgwBWCHEq3qyuh31WzhyPYXgfebI",
+  authDomain: "nauman-labs.firebaseapp.com",
+  projectId: "nauman-labs",
+  storageBucket: "nauman-labs.firebasestorage.app",
+  messagingSenderId: "1094856868653",
+  appId: "1:1094856868653:web:e5d5fcc01ae09e175c09a4",
+  measurementId: "G-RFHWLQM6K0"
+};
+
+const app = initializeApp(firebaseConfig);
+
+export const auth = getAuth(app);
+export const db = getFirestore(app);
